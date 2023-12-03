@@ -1,0 +1,22 @@
+
+REMOVE/RENAME UNNESSARY FILES
+
+1. Open C:\Users\user\location\t7_full_game
+2. Open the "Video folder"
+3. To remove the startup video rename "bo3_global_logo_logosequence.mkv" to something else.
+ 			     Example: "1bo3_global_logo_logosequence.mkv"
+
+4. Now depending on what your playing (Zombies/Multiplayer) rename all the load.mkv & loading_movie.mkv exactly like the previous step.
+			     Zombies will be zm, Campaign will be cp, Multiplayer will be mp.
+
+ENABLE PERFORMANCE MODE
+
+1. Open Graphic Settings
+2. Add a program and locate the t7 folder, "boiii.exe" should already be at performance mode however you can add "BlackOps3.exe" in there to increase performance.
+3. Within the t7 folder right click, then go to properties, then compatibility. In that screen you should see "Disable Fullscreen Optimization", Enable it.
+	
+CHANGE CONIFG
+
+1. Open the t7 folder
+2. Navigate to the "boiii_players" folder
+3. Locate config.ini & change everything as needed.

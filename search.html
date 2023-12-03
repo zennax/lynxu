@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="data/search.js"></script>
+    <link rel="icon" href="data/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/main.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="lib/nav.css">
+    <link rel="stylesheet" href="lib/footer.css">
+    <link rel="stylesheet" href="lib/search.css">
+    <script src="data/dropdown.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynxu</title>
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">&#9776;</button>
+            <div class="dropdown-content">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </div>
+        </div>
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+        </ol>
+        <img src="data/favicon.ico">
+    </nav>
+    <div><!--header-->
+        <header>
+            <h1></h1>
+        </header>
+    </div>
+    <div><!--main-->
+        <main>
+            <form id="search-form">
+                <input style="background-color: #ffffff; color: #fff;" type="text" id="query" placeholder="Search..." value="" onclick="console.log('Searching...');">
+                <button style="border-radius: 14px; border: none;" type="submit">Search</button>
+            </form>
+                <div id="results" onload="console.log('Results Loaded');"></div>
+            <div class="load-more-button">
+                <button id="load-more">Load More</button>
+            </div>
+            <div class="player-options">
+                <label for="default-player">Default Player</label>
+                <input type="radio" id="default-player" name="player-option" value="default" checked onclick="console.log('Changing Player to Default');">
+                <label for="custom-player" style="color: red; filter: opacity(0.3);">Custom Player</label>
+                <input disabled name="radioGroup" type="radio" id="custom-player" name="player-option" value="custom" onclick="console.log('Changing Player to Custom');">
+            </div>
+                <div id="player-container"></div>
+        </main>
+    </div>
+    <div> <!--footer-->
+        <footer>
+            <p>&copy Maintained by <a href="https://github.com/KAXXX0">KAXXX0</a></p>
+        </footer>
+        <div class="gray">a</div>
+    </div>
+</body>
+</html>

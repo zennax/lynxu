@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    color: #fff;
+    background-color: #734faa71;
+    justify-content: center;
+    text-align: center;
+    position: static;
+    bottom: 0;
+}
+.gray {
+    text-align: center;
+    background-color: #33333392;
+    color: #00000000;
+}
