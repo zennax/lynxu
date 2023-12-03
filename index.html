@@ -10,8 +10,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lynxu</title>
+    <script>
+        function requestLocation() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const locationInfo = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                        alert(`Location Access Granted\n${locationInfo}`);
+                    },
+                    (error) => {
+                        console.error(`Error getting location: ${error.message}`);
+                        alert("Location Access Denied or Not Enabled");
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported in this browser.");
+            }
+        }
+        </script>
 </head>
-<body>
+<body onload="requestLocation()">
     <nav>
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropdown()">&#9776;</button>
