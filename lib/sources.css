@@ -26,6 +26,7 @@
 }
 
 #playlist li {
+    margin: 2.2px;
     border: 2px solid #000;
     min-width: 45%;
     cursor: pointer;
