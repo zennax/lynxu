@@ -19,6 +19,8 @@
 
 .playlist {
     margin-top: 20px;
+    width: auto;
+    height: 700px;
     overflow: auto;
     white-space: nowrap;
     text-overflow: ellipsis;

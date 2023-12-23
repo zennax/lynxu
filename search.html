@@ -5,7 +5,6 @@
     <link rel="icon" href="data/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="lib/main.css">
     <link rel="stylesheet" href="dropdown.css">
-    <link rel="stylesheet" href="lib/nav.css">
     <link rel="stylesheet" href="lib/footer.css">
     <link rel="stylesheet" href="lib/search.css">
     <script src="data/dropdown.js"></script>
@@ -18,30 +17,25 @@
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropdown()">&#9776;</button>
             <div class="dropdown-content">
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
-            </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sources.html">Sources</a></li>
+                <li><a href="search.html">Search</a></li>
+                <a href="games.html">Games</a>
+                <a href="movie.html">Movies</a>
+                <a href="pre-loaded-scripts.html">Scripts</a>
+                <a href="about.html">About</a>
         </div>
-        <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sources.html">Sources</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="about.html">About</a></li>
-        </ol>
-        <img src="data/favicon.ico">
     </nav>
-    <div><!--header-->
-        <header>
-            <h1></h1>
-        </header>
+    <div>
+        <header><h1 style="text-align: center;">Youtube</h1></header>
     </div>
     <div><!--main-->
         <main>
             <form id="search-form">
-                <input style="background-color: #ffffff; color: #fff;" type="text" id="query" placeholder="Search..." value="" onclick="console.log('Searching...');">
+                <input style="background-color: #ffffff; color: #000000;" type="text" id="query" placeholder="Search..." value="" onclick="console.log('Searching...');">
                 <button style="border-radius: 14px; border: none;" type="submit">Search</button>
             </form>
+            <p style=" text-align: center; font-size: 16px;">Redirects to a working <b style="color: red;">Invidious</b> instance</p>
                 <div id="results" onload="console.log('Results Loaded');"></div>
             <div class="load-more-button">
                 <button id="load-more">Load More</button>
