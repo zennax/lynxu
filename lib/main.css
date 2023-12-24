@@ -33,7 +33,7 @@ html {
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     background-color: #666666dc;
 }
 .sources {
