@@ -2,6 +2,10 @@
     body {
         padding: 5px;
     }
+    .grid {
+        padding: 2px;
+        margin: 2px;
+    }
   }
 .audio-player {
     position: fixed;
