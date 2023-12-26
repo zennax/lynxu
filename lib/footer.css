@@ -6,9 +6,12 @@ footer {
     text-align: center;
     position: static;
     bottom: 0;
+    border: 2px solid #1f1f1fcb;
 }
 .gray {
+    margin-top: 0.6372px;
     text-align: center;
+    border: 0.2px solid #1f1f1fcb;
     background-color: #33333392;
     color: #00000000;
 }

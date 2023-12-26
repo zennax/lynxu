@@ -1,9 +1,19 @@
+@media (max-width: 768px) {
+    .dropdown-content a{
+        font-size: 22px;
+    }
+  }
 .dropdown {
+    z-index: 50;
     position: fixed;
     padding: 10px;
     display: inline-block;
     top: 0;
     left: 0;
+}
+
+.dropdown button {
+    border: 1px solid #1f1f1fcb;
 }
 
 .dropbtn {
@@ -16,11 +26,13 @@
 }
 
 .dropdown-content {
+    margin-top: 2px;
     display: none;
     position: absolute;
     background-color: #707070;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border: 2px solid #1f1f1fcb;
     z-index: 1;
 }
 

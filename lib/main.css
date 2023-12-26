@@ -28,6 +28,10 @@
 * {
     animation: slideIn 1s ease-in-out;
 }
+h1 {
+  background-color:#23509d71;
+  border: 2px solid #1f1f1fcb;
+}
 html {
     scroll-behavior: smooth;
 }
