@@ -10,6 +10,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lynxu</title>
+    <script>
+        var isWhite = false;
+        function changeColor() {
+            if (isWhite) {
+                document.body.style.backgroundColor = "#4b4b4bdc";
+                isWhite = false;
+            } else {
+                document.body.style.backgroundColor = "white";
+                isWhite = true;
+            }
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -23,6 +35,7 @@
                 <a href="movie.html">Movies</a>
                 <a href="pre-loaded-scripts.html">Scripts</a>
                 <a href="about.html">About</a>
+                <button onclick="changeColor()">Change Background Color</button>
             </div>
         </div>
     </nav>
@@ -342,7 +355,9 @@
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Purple Substance.mp3">Purple Substance</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Put Me Down.mp3">Put Me Down</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Race Beginning.mp3">Race Beginning</li>
-                    <h2 style="text-align: center;">XXXTENTACION</h2>
+                    <span style="width: 100%; color: #00000000;">a</span>
+                    <h2>XXXTENTACION</h2>
+                    <span style="width: 100%; color: #00000000;">a</span>
                     <li data-src="https://xkxng.github.io/quake.github.io/X/Bowser.mp3">Bowser</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/X/Curse.mp3">Curse</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/X/H2O.mp3">H2O</li>
