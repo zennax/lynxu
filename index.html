@@ -21,6 +21,31 @@
             }
         }
     </script>
+    <script>
+    function myFunction() {
+      var input, filter, ul, li, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Display the list when user starts typing
+      if (input.value.length > 0) {
+        ul.style.display = "";
+      } else {
+        ul.style.display = "none";
+      }
+    
+      for (i = 0; i < li.length; i++) {
+        txtValue = li[i].textContent || li[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
     <!--
     <script>
         function requestLocation() {
@@ -60,6 +85,19 @@
     </nav>
     <br>
     <br>
+    <input style="margin: 10px; padding: 10px;left: 0; position: static;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
+
+    <ul id="myUL" style="display: none;">
+      <li><a href="https://zennax.github.io/lynxu/sources.html">Juice Wrld</a></li>
+      <li><a href="https://zennax.github.io/lynxu/sources.html">XXXTENTACION</a></li>
+      <li><a href="https://zennax.github.io/lynxu/pre-loaded-scripts.html">Plutonium</a></li>
+      <li><a href="https://zennax.github.io/lynxu/pre-loaded-scripts.html">BOIII</a></li>
+      <li><a href="https://zennax.github.io/lynxu/pre-loaded-scripts.html">NewPipe</a></li>
+      <li><a href="https://zennax.github.io/lynxu/movie.html">Movies</a></li>
+      <li><a href="https://zennax.github.io/lynxu/search.html">Youtube Search</a></li>
+    </ul>
+    
+    
     <div class="header"><!--header-->
         <header>
             <h1>Welcome to <u>lynxu</u>!</h1>
@@ -68,6 +106,7 @@
     <div class="main"><!--main-->
         <main>
             <p>Big project coming soon!</p>
+            
         </main>
     </div>
     <div> <!--footer-->
