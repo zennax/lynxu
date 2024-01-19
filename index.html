@@ -9,43 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lynxu</title>
-    <script>
-        var isWhite = false;
-        function changeColor() {
-            if (isWhite) {
-                document.body.style.backgroundColor = "#4b4b4bdc";
-                isWhite = false;
-            } else {
-                document.body.style.backgroundColor = "white";
-                isWhite = true;
-            }
-        }
-    </script>
-    <script>
-    function myFunction() {
-      var input, filter, ul, li, i, txtValue;
-      input = document.getElementById('myInput');
-      filter = input.value.toUpperCase();
-      ul = document.getElementById("myUL");
-      li = ul.getElementsByTagName('li');
-    
-      // Display the list when user starts typing
-      if (input.value.length > 0) {
-        ul.style.display = "";
-      } else {
-        ul.style.display = "none";
-      }
-    
-      for (i = 0; i < li.length; i++) {
-        txtValue = li[i].textContent || li[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
-    }
-    </script>
+    <script src="data/changebgcolor.js"></script>
+
+    <script src="data/indexsearchquery.js"></script>
     <!--
     <script>
         function requestLocation() {
