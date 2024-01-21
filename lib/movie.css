@@ -1,37 +1,117 @@
 main {
     max-width: 20%;
 }
-.movies{
+.invis {
+    width: 100%;
+    background-color: #23509d71;
+    color: #00000000;
+    justify-content: center;
+    text-align: center;
+    position: static;
+    border: 2px solid #1f1f1fcb;
+}
+.fanfavs h1{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+} 
+.fanfavs {
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
-    background-color: #0000004f;
-    padding: 10px;
 }
-
+.fanfavs > a {
+    background-color: #33333380;
+    font-size: 24px;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: solid 2px #333;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-weight: 700;
+    color: #d1d1d1ce;
+    text-decoration: none;
+}
+.fanfavs a:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: #7271714f;    
+}
+.movies {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+}
 .movies > a {
+    background-color: #33333380;
+    font-size: 24px;
     max-width: 100%;
     padding: 10px;
     margin: 5px;
-    box-shadow: #333 3px 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: solid 2px #333;
-    transition: ease-in 120ms;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     font-weight: 700;
     color: #d1d1d1ce;
     text-decoration: none;
 }
 .movies a:hover {
-    transition: ease-in 120ms;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: #7271714f;    
 }
-.movies a:visited {
-    color: #664499ce;
+.turbo img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #111;
+    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
 }
-.turbo img{
-    margin-left: 88.99px;
-    box-shadow: #9191918f 2px 2px;
+.crawlers img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #111;
+    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+}
+.fnaf img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #111;
+    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+}
+.southp img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 2px solid #111;
     max-height: 200px;
     max-width: 200px;
+    width: 100%;
+}
+.thelionking img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #111;
+    max-height: 200px;
+    max-width: 200px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;
+    }
+
+    .movies {
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .turbo img {
+        max-height: 100px;
+        max-width: 100px;
+    }
 }
