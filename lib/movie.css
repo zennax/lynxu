@@ -10,15 +10,28 @@ main {
     padding: 10px;
 }
 
-.movies > * {
+.movies > a {
     max-width: 100%;
     padding: 10px;
     margin: 5px;
     box-shadow: #333 3px 3px;
     border: solid 2px #333;
+    transition: ease-in 120ms;
+    font-weight: 700;
+    color: #d1d1d1ce;
+    text-decoration: none;
 }
-
-iframe {
-    overflow: scroll;
-    justify-content: flex-start;
+.movies a:hover {
+    transition: ease-in 120ms;
+    background-color: #7271714f;    
+}
+.movies a:visited {
+    color: #664499ce;
+}
+.turbo img{
+    margin-left: 88.99px;
+    box-shadow: #9191918f 2px 2px;
+    border: 2px solid #111;
+    max-height: 200px;
+    max-width: 200px;
 }
