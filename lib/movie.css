@@ -1,0 +1,24 @@
+main {
+    max-width: 20%;
+}
+.movies{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    background-color: #0000004f;
+    padding: 10px;
+}
+
+.movies > * {
+    max-width: 100%;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: #333 3px 3px;
+    border: solid 2px #333;
+}
+
+iframe {
+    overflow: scroll;
+    justify-content: flex-start;
+}
