@@ -14,8 +14,8 @@ main {
     position: static;
     border: 2px solid #1f1f1fcb;
 }
-.fanfavs h1{
-    position: absolute;
+.h1 {
+    position: static;
     width: 100%;
     top: 0;
     text-align: center;
