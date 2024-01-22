@@ -1,10 +1,13 @@
-html {
+html, body {
     max-width: 100%;
     overflow-x: hidden;
+    cursor: url("");
 }
+/*
 main {
     max-width: 20%;
 }
+*/
 .comingsoon {
     padding: 10px;
     display: grid;
