@@ -124,63 +124,7 @@ main {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: #7271714f;    
 }
-.turbo img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    width: 100%;
-    max-width: 200px;
-}
-.crawlers img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    width: 100%;
-    max-width: 200px;
-}
-.fnaf img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    width: 100%;
-    max-width: 200px;
-}
-.southp img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    max-width: 200px;
-    width: 100%;
-}
-.thelionking img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    max-width: 200px;
-    width: 100%;
-}
-.wall-e img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    max-width: 200px;
-    width: 100%;
-}
-.young-sheldon img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    width: 100%;
-    max-width: 200px;
-}
-.the-100 img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 2px solid #111;
-    max-height: 200px;
-    width: 100%;
-    max-width: 200px;
-}
-.spongebob img {
+.frame img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 2px solid #111;
     max-height: 200px;
