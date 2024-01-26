@@ -17,7 +17,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lynxu</title>
     <script src="data/changebgcolor.js"></script>
-
+    <style>
+        iframe {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: auto;
+            border: 2px solid black;
+            box-shadow: 2px black;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -67,19 +78,22 @@
                 <li><a href="">placenamehere</a></li>
                
             </ul>
+
+            <iframe allowfullscreen id="myIframe" src=""></iframe>
+
             <h1 class="h1">Fan Favorites</h1>
             <div class="fanfavs">
-                <a href="https://vidsrc.to/embed/movie/tt1637725"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_.jpg">Ted (2012)</div></a>
-                <a hidden href="https://vidsrc.to/embed/movie/tt2637276"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_.jpg">Ted 2 (2015)</div></a>
-                <a href="https://ia902500.us.archive.org/19/items/turbo_202208/TURBO.mp4?cnt=0"><div class="frame"><img src="https://www.themoviedb.org/t/p/original/tN4bjzZ3ePY57hpCTFk0Kc3oXAw.jpg"></div>Turbo (2013)</a>
-                <a href="https://vidsrc.to/embed/movie/1219926"><div class="frame"><img src="https://thumbnails.cbsig.net/_x/w1200/CBS_Production_Entertainment_VMS/2023/12/01/2288447555910/SPNSC_US_2023_SA_16x9_1920x1080_NB_2501812_1920x1080.jpg"></div>South Park (Not Suitable for Children) (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt4589218"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BNmNlZWI4MDQtMzFlYS00NzJmLTkwZjItZWVmNmJjZGYxNDA1XkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg"></div>Five Nights at Freddy's (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt0110357"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg"></div>The Lion King (1994)</a>
-                <a href="https://vidsrc.to/embed/movie/tt0910970"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_.jpg"></div>WALL-E</a>
-                <a href="https://vidsrc.to/embed/movie/tt0816692"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">Interstellar</div></a>
-                <a href="https://vidsrc.to/embed/movie/tt1375670"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjA0ODYwNzU5Nl5BMl5BanBnXkFtZTcwNTI1MTgxMw@@._V1_.jpg">Grown Ups (2010)</div></a>
-                <a href="https://vidsrc.to/embed/movie/tt2191701"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BNTZkZDhjZTEtZjA5MC00MDU2LTk3NDItNzA2YzQ4Y2Q5NjZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg"> Grown Ups 2 (2013)</div></a>
-                <a href="https://vidsrc.to/embed/movie/"><div class="frame"><img src=""></div></a>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt1637725')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_.jpg">Ted (2012)</div></button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt2637276')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_.jpg">Ted 2 (2015)</div></button>
+                <button onclick="changeSrc('https://ia902500.us.archive.org/19/items/turbo_202208/TURBO.mp4?cnt=0')"><div class="frame"><img src="https://www.themoviedb.org/t/p/original/tN4bjzZ3ePY57hpCTFk0Kc3oXAw.jpg"></div>Turbo (2013)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/1219926')"><div class="frame"><img src="https://thumbnails.cbsig.net/_x/w1200/CBS_Production_Entertainment_VMS/2023/12/01/2288447555910/SPNSC_US_2023_SA_16x9_1920x1080_NB_2501812_1920x1080.jpg"></div>South Park (Not Suitable for Children) (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt4589218')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BNmNlZWI4MDQtMzFlYS00NzJmLTkwZjItZWVmNmJjZGYxNDA1XkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg"></div>Five Nights at Freddy's (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt0110357')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg"></div>The Lion King (1994)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt0910970')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_.jpg"></div>WALL-E</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt0816692')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg">Interstellar</div></button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt1375670')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjA0ODYwNzU5Nl5BMl5BanBnXkFtZTcwNTI1MTgxMw@@._V1_.jpg">Grown Ups (2010)</div></button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt2191701')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BNTZkZDhjZTEtZjA5MC00MDU2LTk3NDItNzA2YzQ4Y2Q5NjZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg"> Grown Ups 2 (2013)</div></button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/')"><div class="frame"><img src=""></div></button>
                 
             </div>
             <div class="h1"><h1>Coming Soon</h1></div>
@@ -103,22 +117,22 @@
               -->
         <main>
             <div class="movies">
-                <a href="https://vidsrc.to/embed/movie/tt8639168"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjc1NTFlMWEtNmRiOC00YzhiLTliYzktNzMwNTllYWU3ZGU4XkEyXkFqcGdeQXVyMTYwNjQ1MTc@._V1_QL75_UY140_CR107,0,140,140_.jpg"></div>Crawlers (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt17009348"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMGQxYjQyMWItZjc3Ni00ZTJmLTg0ZTEtOTczYzI3NzZlM2M0XkEyXkFqcGdeQXVyNDM1ODc2NzE@._V1_.jpg"></div>DogMan (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt21222462"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BY2FiNzk3ZGEtYzAwZS00OWFhLTgyZDAtM2E2OTM5Y2E3MmRkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"></div>The Good Mother (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt28787545"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BYzYyZTQ3NGYtMzNjMC00NWU4LTljMzYtZTM0MzI2ZDEzMDdkXkEyXkFqcGdeQXVyMTU4MzQzNDkx._V1_.jpg"></div>A Scottish Love Scheme (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt25406412"><div class="frame"><img src=""></div>Inshallah a Boy (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt17079602"><div class="frame"><img src=""></div>The Alien Report (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt22890246"><div class="frame"><img src=""></div>How to Have Sex (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt20561198"><div class="frame"><img src=""></div>The Promised Land (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt12432558"><div class="frame"><img src=""></div>A Wall Away (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt15334154"><div class="frame"><img src=""></div>Lion-Girl (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt22868094"><div class="frame"><img src=""></div>The Night They Came Home (2024)</a>
-                <a href="https://vidsrc.to/embed/movie/tt6166392"><div class="frame"><img src=""></div>Wonka</a>
-                <a href="https://vidsrc.to/embed/movie/tt9663764"><div class="frame"><img src=""></div>Aquaman and the Lost Kingdom (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt6495056"><div class="frame"><img src=""></div>Migration (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt14230458"><div class="frame"><img src=""></div>Poor Things (2023)</a>
-                <a href="https://vidsrc.to/embed/movie/tt17351924"><div class="frame"><img src=""></div>Saltburn (2023)</a>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt8639168')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMjc1NTFlMWEtNmRiOC00YzhiLTliYzktNzMwNTllYWU3ZGU4XkEyXkFqcGdeQXVyMTYwNjQ1MTc@._V1_QL75_UY140_CR107,0,140,140_.jpg"></div>Crawlers (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt17009348')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BMGQxYjQyMWItZjc3Ni00ZTJmLTg0ZTEtOTczYzI3NzZlM2M0XkEyXkFqcGdeQXVyNDM1ODc2NzE@._V1_.jpg"></div>DogMan (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt21222462')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BY2FiNzk3ZGEtYzAwZS00OWFhLTgyZDAtM2E2OTM5Y2E3MmRkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"></div>The Good Mother (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt28787545')"><div class="frame"><img src="https://m.media-amazon.com/images/M/MV5BYzYyZTQ3NGYtMzNjMC00NWU4LTljMzYtZTM0MzI2ZDEzMDdkXkEyXkFqcGdeQXVyMTU4MzQzNDkx._V1_.jpg"></div>A Scottish Love Scheme (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt25406412')"><div class="frame"><img src=""></div>Inshallah a Boy (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt17079602')"><div class="frame"><img src=""></div>The Alien Report (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt22890246')"><div class="frame"><img src=""></div>How to Have Sex (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt20561198')"><div class="frame"><img src=""></div>The Promised Land (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt12432558')"><div class="frame"><img src=""></div>A Wall Away (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt15334154')"><div class="frame"><img src=""></div>Lion-Girl (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt22868094')"><div class="frame"><img src=""></div>The Night They Came Home (2024)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt6166392')"><div class="frame"><img src=""></div>Wonka</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt9663764')"><div class="frame"><img src=""></div>Aquaman and the Lost Kingdom (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt6495056')"><div class="frame"><img src=""></div>Migration (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt14230458')"><div class="frame"><img src=""></div>Poor Things (2023)</button>
+                <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt17351924')"><div class="frame"><img src=""></div>Saltburn (2023)</button>
                 <!--
                     <a href="https://vidsrc.to/embed/movie/"></a>
                 <a href="https://vidsrc.to/embed/movie/"></a>
@@ -138,21 +152,12 @@
             </div>
         </main>    
         
-        
-<!--
-        <iframe allowfullscreen id="myIframe" src="https://www.bing.com"></iframe>
-
-        <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt21222462')">1</button>
-        <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt12432558')">2</button>
-        <button onclick="changeSrc('https://vidsrc.to/embed/movie/tt17351924')">3</button>
-        
         <script>
         function changeSrc(src) {
           document.getElementById("myIframe").src = src;
         }
         </script>
         
-    -->
 
 
     
@@ -169,7 +174,6 @@
         </div>
         <div class="h1"><h1></h1></div>
     </div>
-    <p>Click <a href="mvi.html">here</a> for a test version of this page</p>
     <div> <!--footer-->
         <footer>
             <p>&copy Maintained by <a href="https://github.com/KAXXX0">KAXXX0</a></p>
