@@ -1,0 +1,23 @@
+.gray {
+    width: 100%;
+    background-color: #0000009f;
+    color: #00000000;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 5px solid black;
+}
+#myIframe {
+    background-color: black;
+}
+.main button {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 50px;
+}
