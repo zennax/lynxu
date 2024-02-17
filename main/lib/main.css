@@ -5,19 +5,34 @@
 }
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+    background-color: #333333;
     border: 5px solid black;
 }
 #myIframe {
     background-color: black;
+    width: 100%;
+    height: 60vw;
 }
-.main button {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
+.main main button {
+    zoom: 110%;
+    width: 20%;
     height: 50px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 5px;
+    background-color: #4e4d4d;
+}
+.main main button:hover {
+    background-color: #555;
+}
+.frame {
+    margin: 0;
+    padding: 0;
+    display: none;
 }
