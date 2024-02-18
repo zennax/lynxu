@@ -1,5 +1,15 @@
 .footer footer {
-    position: absolute;
+    position: static;
+    text-align: center;
+    background-color: #000;
+    color: white;
     bottom: 0;
     width: 100%;
+}
+.footer a {
+    color: #1d6bea;
+    
+}
+.footer a:visited {
+    color: #1d6bea;
 }
