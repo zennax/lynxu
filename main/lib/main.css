@@ -1,9 +1,21 @@
+@media (max-width: 782px) {
+
+}
+* {
+    box-sizing: border-box;
+}
 .gray {
     width: 100%;
-    background-color: #0000009f;
-    color: #00000000;
+    background-color: #000000;
+    color: #000000bd;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: white;
+    background-color: #000000;
 }
 html {
+    font-size: 22px;
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -14,19 +26,8 @@ body {
 #myIframe {
     background-color: black;
     width: 100%;
+    border: none;
     height: 60vw;
-}
-.main main button {
-    zoom: 110%;
-    width: 20%;
-    height: 50px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 0px;
-    margin: 5px;
-    background-color: #4e4d4d;
 }
 .main main button:hover {
     background-color: #555;
@@ -35,4 +36,35 @@ body {
     margin: 0;
     padding: 0;
     display: none;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
+
+.filler {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; 
+}
+.filler a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: none; 
+    transition: transform 0.3s ease;
+}
+.filler a:hover {
+    transform: scale(1.05);
+}
+.filler .frame img {
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
 }

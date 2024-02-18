@@ -27,6 +27,7 @@ nav a:hover {
     .dropdown-content a{
         font-size: 22px;
     }
+    
   }
 .dropdown {
     z-index: 50;
