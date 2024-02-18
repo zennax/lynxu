@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data/.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="lib/main.css">
+    <link rel="stylesheet" href="lib/bg.css">
+    <link rel="stylesheet" href="lib/footer.css">
+    <link rel="stylesheet" href="lib/nav.css">
+    <link rel="stylesheet" href="lib/dropdown.css">
+    <link rel="stylesheet" href="lib/header.css">
+    <script src="data/dropdown.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="games.html">Games</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div><!--main-->
+        <main>
+            <div class="audio-player" preload="auto">
+                <audio id="audio" src="" controls hidden></audio>
+                <div id="currentSongTitle"></div>
+                <div class="controls">
+                    <button id="playPauseBtn">&#9658;</button>
+                    <input type="range" id="progress" value="0">
+                    <input type="range" id="volume" value="110" max="110">
+                </div>
+            </div>
+            <div class="playlist" preload="auto">
+                <h2 style="text-align: center;">JUICE WLRD</h2>
+                <ul id="playlist" class="grid" style="display: flex;">
+                    <li data-src="https://xkxng.github.io/quake.github.io/Demise.mp3">Demise</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Juice WRLD - Rugrats (Kicks) (NEW CDQ Leak).mp3">Rugrats</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Naruto.mp3">Naruto</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/OverSprung.mp3">Oversprung</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Priceless.mp3">Priceless</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Shoot Em Down.mp3">Shoot Em Down</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Something to Prove.mp3">Something to Prove</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Swear.mp3">Swear</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/White Mask.mp3">White Mask</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/You.mp3">You</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/4 Instance.mp3">4 Instance</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Crystal.mp3">Crystal</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Afterlife (New Leak).mp3">Afterlife</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Ball [UNRELEASED].mp3">Ball</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Californication (Unreleased).mp3">Californication</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Cupids Carcass (Unreleased) (New Leak).mp3">Cupids Carcass</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Flavor (Official CDQ) (Unreleased).mp3">Flavor</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - GTA (Unreleased).mp3">GTA</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Left 4 Dead [UNRELEASED].mp3">Left 4 Dead</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Nightmare (Unreleased).mp3">Nightmare</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - No Fears leak.mp3">No Fears leak</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Rain Dance (Official Lyric Video) [UNRELEASED].mp3">Rain Dance</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Reason (CDQ).mp3">Reason</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Rotate [UNRELEASED].mp3">Rotate</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - So Low (Unreleased).mp3">So Low</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - So What [UNRELEASED].mp3">So What</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice WRLD - Spanglish (Unreleased).mp3">Spanglish</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Juice Wrld - AP Tik Tok ( 2019 My Year ) (Unreleased).mp3">AP Tik Tok</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Never Switch.mp3">Never Switch</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/TB3.mp3">TB3</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/Uh Huh.mp3">Uh Huh</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/999/jwftt.mp3">FTT</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/24 Hours (Secure The Bag).mp3">24 Hours</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/6 Kiss (v1) [with YNW Melly &amp; Trippie Redd].mp3">6 Kiss (v1)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/6.mp3">6</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/90210.mp3">90210</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/999.mp3">999</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Addicted.mp3">Addicted</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/All Girls Are The Same - Remix (ft. Lil Yachty).mp3">All Girls Are The Same</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/All Of Me.mp3">All Of Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/All Smoke.mp3">All Smoke</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Alright.mp3">Alright</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Analog.mp3">Analog</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Another Way.mp3">Another Way</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Any Other Way.mp3">Any Other Way</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Army Armory.mp3">Army Armory</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Back In Chicago.mp3">Back In Chicago</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Bad Boy (v4) [feat. Young Thug].mp3">Bad Boy (v4)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Bandit (v1) [Molly Savage].mp3">Bandit (v1) [Molly Savage]</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Bank Account.mp3">Bank Account</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Barbarian.mp3">Barbarian</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Been Myself (6 Kiss Demo).mp3">Been Myself</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Been Through This (feat. Miley Cyrus).mp3">Been Through This</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Best Around.mp3">Best Around</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Best Believe.mp3">Best Believe</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Big Swag (v2).mp3">Big Swag (v2)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Big Swag.mp3">Big Swag</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Blastoff (with Trippie Redd) [v1].mp3">Blastoff</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Blue Shit.mp3">Blue Shit</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Bonnie &amp; Clyde.mp3">Bonnie &amp; Clyde</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Boondocks.mp3">Boondocks</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Boss Of Me.mp3">Boss Of Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Buck 50 (v1).mp3">Buck 50 (v1)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Bullet For My Valentine.mp3">Bullet For My Valentine</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Can't Help It.mp3">Can't Help It</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Can't Let Go.mp3">Can't Let Go</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Carry It.mp3">Carry It</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Chimp.mp3">Chimp</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Chrome.mp3">Chrome</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Cigarettes.mp3">Cigarettes</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Classroom.mp3">Classroom</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Codeine Guzzler.mp3">Codeine Guzzler</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Complications.mp3">Complications</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Confide.mp3">Confide</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Confused (feat. Lil Yachty).mp3">Confused (feat. Lil Yachty)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Coraline.mp3">Coraline</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/DJ Khaled.mp3">DJ Khaled</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Day 1.mp3">Day 1</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Death Penalty.mp3">Death Penalty</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Devil Horns.mp3">Devil Horns</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Die To Live.mp3">Die To Live</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Different Phases.mp3">Different Phases</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Do It.mp3">Do It</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Don't Care (2017).mp3">Don't Care (2017)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Don't Go.mp3">Don't Go</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Don't Know What I'm On.mp3">Don't Know What I'm On</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Don’t Got Time.mp3">Don’t Got Time</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Drivin' So Fast.mp3">Drivin' So Fast</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Evil Twins (with Ski Mask the Slump God).mp3">Evil Twins</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Faded.mp3">Faded</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Fast Forward.mp3">Fast Forward</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Fire In My Lungs.mp3">Fire In My Lungs</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Flavor.mp3">Flavor</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Flintstones.mp3">Flintstones</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Floor It.mp3">Floor It</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Foo Foo (feat. G Herbo).mp3">Foo Foo (feat. G Herbo)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/For The Team (feat. Lil Yachty).mp3">For The Team (feat. Lil Yachty)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Forever Love.mp3">Forever Love</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Friends Die (Fuck About Your Feelings).mp3">Friends Die</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/GTA.mp3">GTA</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Gave Her All Of Me.mp3">Gave Her All Of Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Glowed Up (v2).mp3">Glowed Up (v2)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Go Go Go (with The Kid Laroi).mp3">Go Go Go</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Go Home.mp3">Go Home</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Grateful (v2).mp3">Grateful (v2)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Heavy.mp3">Heavy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Hell (feat. Mthang).mp3">Hell</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Hennessy.mp3">Hennessy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Hit A Lick.mp3">Hit A Lick</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/I Do This.mp3">I Do This</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/I Don't Need It.mp3">I Don't Need It</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Iceberg Avalanche (Freestyle).mp3">Iceberg Avalanche</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/In A Minute (v2) [feat. Takeoff &amp; Lil Skies].mp3">In A Minute (v2)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/In My Bag.mp3">In My Bag</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Infatuated.mp3">Infatuated</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/5 AM.mp3">5 AM</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/6.mp3">6</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/8 minute freestyle.mp3">8 minute freestyle</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All Girls Are The Same [Apple Music Exclusive].mp3">All Girls Are The Same</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All Of Me.mp3">All Of Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All Talk.mp3">All Talk</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All The Same.mp3">All The Same</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Another Way.mp3">Another Way</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Anxiety.mp3">Anxiety</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Any Other Way.mp3">Any Other Way</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Astray.mp3">Astray</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Bag.mp3">Bag</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Ball.mp3">Ball</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Bandit (OG).mp3">Bandit (OG)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Barbarian.mp3">Barbarian</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Been A While.mp3">Been A While</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Best Around.mp3">Best Around</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Big Swag.mp3">Big Swag</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Birds Eye View.mp3">Birds Eye View</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Bitch youre done.mp3">Bitch youre done</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Blastoff (ft. Juice WRLD)(v4).mp3">Blastoff (ft. Juice WRLD)(v4)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Bottle.mp3">Bottle</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Bullet For My Valentine.mp3">Bullet For My Valentine</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Cake.mp3">Cake</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Cant Survive.mp3">Cant Survive</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Carry it.mp3">Carry it</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Chimp.mp3">Chimp</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Cigarettes.mp3">Cigarettes</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Codeine Guzzler.mp3">Codeine Guzzler</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Come Around.mp3">Come Around</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Complications .mp3">Complications</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Confide.mp3">Confide</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Coraline.mp3">Coraline</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Cruising.mp3">Cruising</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Demon Love.mp3">Demon Love</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Devil Horns.mp3">Devil Horns</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Drugs Are My Friends.mp3">Drugs Are My Friends</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Dumb Slut.mp3">Dumb Slut</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Electric Chair.mp3">Electric Chair</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Empty Acapella.mp3">Empty Acapella</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fast Forward.mp3">Fast Forward</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fire In My Lungs.mp3">Fire In My Lungs</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fireflies.mp3">Fireflies</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/First Time.mp3">First Time</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Flavor.mp3">Flavor</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fleur De Lis.mp3">Fleur De Lis</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Forever (v2).mp3">Forever (v2)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Freestyle.mp3">Freestyle</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/From The Start.mp3">From The Start</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/GTA.mp3">GTA</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Game.mp3">Game</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Gave Her All Of Me.mp3">Gave Her All Of Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Girl With The Blonde Hair.mp3">Girl With The Blonde Hair</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Girlfriend.mp3">Girlfriend</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Give me my fix.mp3">Give me my fix</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Good Days.mp3">Good Days</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Got Nothing On Me.mp3">Got Nothing On Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hate Her Friends.mp3">Hate Her Friends</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Heart of mine.mp3">Heart of mine</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Heavy.mp3">Heavy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hell.mp3">Hell</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hennessy.mp3">Hennessy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hi-Tech Talk.mp3">Hi-Tech Talk</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hit A Lick.mp3">Hit A Lick</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Hunnid.mp3">Hunnid</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/I Wanna.mp3">I Wanna</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/I don't need it.mp3">I don't need it</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/I don’t know.mp3">I don’t know</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/I love it.mp3">I love it</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Im the Shit.mp3">Im the Shit</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/In A Minute.mp3">In A Minute</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/In My Head.mp3">In My Head</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/In The Trap.mp3">In The Trap</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/In This Bitch.mp3">In This Bitch</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/JW - 90210.mp3">JW - 90210</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Jeffery.mp3">Jeffery</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Jordan.mp3">Jordan</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Juicy.mp3">Juicy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Karate kid.mp3">Karate kid</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Kawasaki.mp3">Kawasaki</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Keep up.mp3">Keep up</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Racks In rough.mp3">Racks In rough</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Ran Off.mp3">Ran Off</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Reach Freestyle.mp3">Reach Freestyle</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Rebel Blood.mp3">Rebel Blood</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Right Now.mp3">Right Now</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Road Runners.mp3">Road Runners</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Robbery.mp3">Robbery</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Rockstar Status.mp3">Rockstar Status</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Rockstar in His Prime.mp3">Rockstar in His Prime</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Rodents rough.mp3">Rodents rough</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Run That Shit.mp3">Run That Shit</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Sad Master 2.mp3">Sad Master 2</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Sad.mp3">Sad</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Safe.mp3">Safe</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Scarface.mp3">Scarface</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Shit Talk.mp3">Shit Talk</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Shoot For Love.mp3">Shoot For Love</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Slasher.mp3">Slasher</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Slenderman.mp3">Slenderman</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Smoke.mp3">Smoke</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Some More.mp3">Some More</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Sour.mp3">Sour</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Stick Talk(lava girl).mp3">Stick Talk(lava girl)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Stick Talk.mp3">Stick Talk</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Talking to Voices.mp3">Talking to Voices</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Taskforce.mp3">Taskforce</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Tell Your Friends.mp3">Tell Your Friends</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Tempted.mp3">Tempted</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/The Race.mp3">The Race</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/This is Me OG.mp3">This is Me OG</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/This is Me-Misery Avenue.mp3">This is Me-Misery Avenue</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Thoughts.mp3">Thoughts</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Tick Tock.mp3">Tick Tock</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Tonight.mp3">Tonight</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Too Far.mp3">Too Far</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Triple 9.mp3">Triple 9</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Underworld.mp3">Underworld</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Used to.mp3">Used to</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Watch Me.mp3">Watch Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Wavy.mp3">Wavy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Way too many.mp3">Way too many</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/We Dont Get Along.mp3">We Dont Get Along</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/What To Think.mp3">What To Think</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Whats Brakkin (ft. Offset).mp3">Whats Brakkin (ft. Offset)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Where I Stay.mp3">Where I Stay</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Woah.mp3">Woah</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Work.mp3">Work</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Wrong Time.mp3">Wrong Time</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/Yeah Yeah.mp3">Yeah Yeah</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/You I.mp3">You I</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-3/You Wouldnt Understand.mp3">You Wouldnt Understand</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Kickflip.mp3">Kickflip</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Kill Benjamin.mp3">Kill Benjamin</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lair.mp3">Lair</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lavish.mp3">Lavish</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lean Wit Me [Apple Music Exclusive].mp3">Lean Wit Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Leave Me Alone.mp3">Leave Me Alone</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Let Go.mp3">Let Go</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Life Chase.mp3">Life Chase</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lifes A Dungeon.mp3">Lifes A Dungeon</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Living at the Top.mp3">Living at the Top</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/London Interlude.mp3">London Interlude</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lose You.mp3">Lose You</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lost Love.mp3">Lost Love</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Love And Leave Them.mp3">Love And Leave Them</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Love No Hoe.mp3">Love No Hoe</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Love You Always.mp3">Love You Always</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Lucid Dreams [Apple Music Exclusive].mp3">Lucid Dreams</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Make It Sell.mp3">Make It Sell</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Masterpiece.mp3">Masterpiece</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Me.mp3">Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Midnight.mp3">Midnight</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Money Hunt.mp3">Money Hunt</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Motions.mp3">Motions</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Narcotics.mp3">Narcotics</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Naruto.mp3">Naruto</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Nascar.mp3">Nascar</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Never Ever Good.mp3">Never Ever Good</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/New Girl.mp3">New Girl</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/No More.mp3">No More</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/No Reason.mp3">No Reason</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/No Short Cuts (ft. Juice WRLD).mp3">No Short Cuts</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Numb The Pain.mp3">Numb The Pain</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Oceans (ft. Juice WRLD).mp3">Oceans</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Oh Dear.mp3">Oh Dear</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Oh My Oh My.mp3">Oh My Oh My</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/On Time.mp3">On Time</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Out my body (ft. G herbo).mp3">Out my body (ft. G herbo)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Outta Pocket.mp3">Outta Pocket</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Percaholic.mp3">Percaholic</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Percs.mp3">Percs</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Pesos.mp3">Pesos</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Play Your Role.mp3">Play Your Role</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Plug.mp3">Plug</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Porridge.mp3">Porridge</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Primetime.mp3">Primetime</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Purple Substance.mp3">Purple Substance</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Put Me Down.mp3">Put Me Down</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased/Race Beginning.mp3">Race Beginning</li>
+                    <span style="width: 100%; color: #00000000;">a</span>
+                    <h2>XXXTENTACION</h2>
+                    <span style="width: 100%; color: #00000000;">a</span>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Bowser.mp3">Bowser</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Curse.mp3">Curse</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/H2O.mp3">H2O</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/HEARTEATER.mp3">HEARTEATER</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Joey Badass &amp; XXXTentacion - King's Dead Freestyle (Kendrick Lamar Remix).mp3">King's Dead</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/King.mp3">King</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Madara Uchiha - i am!.mp3">Madara Uchiha - i am!</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/NEVER.mp3">NEVER</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Playboi Carti, XXXTentacion, Ugly God and Madeintyo's 2017 XXL Freshman Cypher.mp3">2017 XXL Freshman Cypher</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/RIP Roach (No Moaning) - XXXTENTACION &amp; Ski Mask The Slump God.mp3">RIP Roach (No Moaning)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/SKI MASK THE SLUMP GOD x XXXTENTACION - TAKE A STEP BACK.mp3">TAKE A STEP BACK</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/SPACEGHOSTPUSSY (RIP YAMS) ft. Lofty305, XXXTENTACION &amp; Ski Mask the Slump God.mp3">SPACEGHOSTPUSSY</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/UP LIKE AN INSOMNIAC (Freestyle).mp3">UP LIKE AN INSOMNIAC</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION &amp; SKI MASK THE SLUMP GOD - FREDDY VS JASON (Prod. Willie G) (OFFICIAL LYRICS).mp3">FREDDY VS JASON</li>
+                    <li style="color: #575757a0;" data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - #ImSippinTeaInYoHood (Prod. RONNYJLISTENUP).mp3">#ImSippinTeaInYoHood</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - #ProudCatOwner #IHateRappers #IEatPussy.mp3">#ProudCatOwner</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - 0C3AN (Lyrics).mp3">0C3AN</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - BitchCallMeCaptainMorgan (Lyrics).mp3">BitchCallMeCaptainMorgan</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Don't Test Me (Lyrics).mp3">Don't Test Me</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - FUXK Ft. Ski Mask The Slump God.mp3">FUXK</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - I spoke to the devil in miami, he said everything would be fine (Lyrics).mp3">ISTDIMAHSEWBF</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - IT’S ALL FADING TO BLACK (OG).mp3">IT’S ALL FADING TO BLACK</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Ice Hotel (Lyrics).mp3">Ice Hotel</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - KILL ME (Lyrics).mp3">KILL ME</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Kick In The Door.mp3">Kick In The Door</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - King Of The Dead (Lyrics).mp3">King Of The Dead</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Let's Pretend We're Numb.mp3">Let's Pretend We're Numb</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Look At Me! (Audio).mp3">Look At Me!</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - MANIKIN ⧸⧸ One Punch Man [AMV].mp3">MANIKIN</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - News⧸Flock (Lyrics).mp3">News⧸Flock</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - OKAGE THE SHADOW KING (Lyrics).mp3">THE SHADOW KING</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Pistol (Lyrics).mp3">Pistol</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - R U N.mp3">R U N</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - RUN UP ON ME (Lyrics).mp3">RUN UP ON ME</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Rare PART 1 [VERY RARE].mp3">Rare PART 1</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Riot.mp3">Riot</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Shining Like the Northstar.mp3">Shining Like the Northstar</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Sloppy Toppy [Ft. Ski Mask The Slump God].mp3">Sloppy Toppy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Snow (Lyrics).mp3">Snow (Lyrics)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Teeth (Lyrics).mp3">Teeth (Lyrics)</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Tightrope (Lyrics).mp3">Tightrope</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Train food (Audio).mp3">Train food</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Uno Dos Tres (Remix) (Prod. LIL BW).mp3">Uno Dos Tres</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Very Rare Forever Freestyle (Lyrics).mp3">Very Rare Forever</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - WHITE GIRL (Lyrics).mp3">WHITE GIRL</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - WingRiddenAngel (Lyrics).mp3">WingRiddenAngel</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - WitDemDicks! (Lyrics).mp3">WitDemDicks!</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Xxxanax (Lyrics).mp3">Xxxanax</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - Yung Bratz.mp3">Yung Bratz</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION - youre thinking to much, stop it (prod. trbld boy).mp3">youre thinking to much, stop it</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTENTACION ft. Ski Mask The Slump God - Mega Man.mp3">Mega Man</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion &amp; Ski Mask The Slump God - Fatality.mp3">Fatality</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion &amp; Ski Mask The Slump God - GXD DAMN (AMV).mp3">GXD DAMN</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion &amp; Trippie Redd - Uh Oh, Thots! (MUSIC VIDEO).mp3">Uh Oh, Thots!</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Alone Part 1 (Lyrics).mp3">Alone Part 1</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - FuckEmWeBall ( Flash Warning).mp3">FuckEmWeBall</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Ghost (Lyrics).mp3">Ghost</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Gnarly Bastard (Lyrics).mp3">Gnarly Bastard</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Happy Halloween (Lyrics).mp3">Happy Halloween</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Hit The Dirt (Lyrics).mp3">Hit The Dirt</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - IGOTPLENTYDICKTOSHARE (Lyrics).mp3">IGOTPLENTYDICKTOSHARE</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - In The End (New Song) (Lyrics).mp3">In The End</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - NETHERRACK! - I just won't break.mp3">I just won't break</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Rare, Part 2 (Lyrics) (Prod. by Lirker).mp3">Rare, Part 2</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - The Boy With The Black Eyes (Lyrics).mp3">he Boy With The Black Eyes</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Ok Shorty! (WSHH Exclusive - Official Audio).mp3">Ok Shorty!</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion - Up Like Insomniac Freestyle (WSHH Exclusive - Official Audio).mp3">Up Like Insomniac</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXTentacion-Inuyasha (Ft. Drugs) Lyrics.mp3">Inuyasha</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXtentacion - I Wonder If Bloods Watch Blues Clues Ft. Craig Xen.mp3">I Wonder If Bloods Watch Blues Clues</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/XXXtentacion-I&amp;m.mp3">I&amp;m</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Xxxtentacion - Vice City.mp3">Vice City</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/Xxxtentacion x Enzo! - Lunacy.mp3">Lunacy</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/You.mp3">You</option>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/going down!.mp3">going down!</option>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/xxxtentacion &amp; Ski Mask The Slump God - WHAT IN XXXTARNATION!？ (Prod.Stain).mp3">WHAT IN XXXTARNATION!？</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/xxxtentacion - in this bitch lit, Free woop freestyle LYRICS.mp3">in this bitch lit</li>
+                    <li data-src="https://xkxng.github.io/quake.github.io/X/xxxtentacion - suicide pit.mp3">suicide pit</li>
+                </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        <div class="gray">%</div>
+            <footer>Created and Mainted by <a href="https://github.com/zamwam">ZamWam</a></footer>
+        <div class="gray">%</div>
+    </div>
+    <script>
+    function changeSrc(src) {
+      document.getElementById("myIframe").src = src;
+    }
+    </script>
+    
+    <script src="data/audio.js"></script>
+</body>
+</html>

@@ -74,3 +74,58 @@ body {
     object-fit: cover; 
     border-radius: 10px; 
 }
+@media (max-width: 768px) {
+    .grid {
+        padding: 2px;
+        margin: 2px;
+    }
+  }
+.audio-player {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 400px;
+    background-color: #00000000;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.playlist {
+    background-color: #41414175;
+    border: 2px solid #000;
+    width: auto;
+    height: 700px;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+}
+#playlist li {
+    margin: 2.2px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #000;
+    min-width: 45%;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+#playlist li:hover {
+    background-color: #ddd;
+}
+#playlist li.highlight {
+    background-color: #41414175;
+}
+.grid {
+    flex-wrap: wrap;
+}
