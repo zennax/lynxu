@@ -32,9 +32,11 @@ body {
 .main main button:hover {
     background-color: #555;
 }
-.frame {
+.frame img{
     width: 200px;
     height: 300px;
+    max-height: 301px;
+    max-width: 201px;
     margin: 0;
     padding: 0;
 }
@@ -127,4 +129,18 @@ body {
 }
 .grid {
     flex-wrap: wrap;
+}
+.SERIES {
+    display: flex;
+    flex-direction: column;
+}
+.SERIES a{
+    display: flex;
+    background-color: #424242a1;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+.SERIES a:hover {
+    background-color: #6b6868c8;
 }
