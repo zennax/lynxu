@@ -1,5 +1,8 @@
-@media (max-width: 782px) {
-
+@media (max-width: 768px) {
+    .grid {
+        padding: 2px;
+        margin: 2px;
+    }
 }
 * {
     box-sizing: border-box;
@@ -15,7 +18,21 @@ h1{
     color: white;
     background-color: #000000;
 }
+.spp {
+    position: static;
+    width: 75%;
+    text-align: center;
+    color: white;
+    background-color: #000;
+    font-size: 48px;
+}
+.spimg{
+    border: 2px solid rgb(255, 255, 255);
+    max-width: 400px;
+    max-height: 600px;
+}
 html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
     scroll-behavior: smooth;
     height: 100%;
@@ -75,12 +92,6 @@ body {
     object-fit: cover; 
     border-radius: 10px; 
 }
-@media (max-width: 768px) {
-    .grid {
-        padding: 2px;
-        margin: 2px;
-    }
-  }
 .audio-player {
     position: absolute;
     top: 0;
@@ -129,18 +140,4 @@ body {
 }
 .grid {
     flex-wrap: wrap;
-}
-.SERIES {
-    display: flex;
-    flex-direction: column;
-}
-.SERIES a{
-    display: flex;
-    background-color: #424242a1;
-    border: 2px solid black;
-    padding: 5px;
-    margin: 10px;
-}
-.SERIES a:hover {
-    background-color: #6b6868c8;
 }
