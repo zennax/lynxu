@@ -6,13 +6,16 @@ const playlist = document.getElementById('playlist');
 const playlistItems = playlist.getElementsByTagName('li');
 const currentSongTitleDisplay = document.getElementById('currentSongTitle'); // Updated line
 
+// Variable to store the currently selected playlist item
+let currentPlaylistItem = null;
+
 playPauseBtn.addEventListener('click', togglePlayPause);
 audio.addEventListener('timeupdate', updateProgress);
 progress.addEventListener('input', setProgress);
 volume.addEventListener('input', setVolume);
 
-// Variable to store the currently selected playlist item
-let currentPlaylistItem = null;
+// Listen for the 'ended' event to go to the next song
+audio.addEventListener('ended', playNextSong);
 
 for (let i = 0; i < playlistItems.length; i++) {
     playlistItems[i].addEventListener('click', function () {
@@ -66,18 +69,34 @@ function changeSong(songSrc) {
     audio.load();
 }
 
-// Function to update the currently playing song title display
-function updateCurrentSongTitleDisplay() {
-    const currentSongTitle = getCurrentSongTitle();
-    currentSongTitleDisplay.innerHTML = currentSongTitle;
+function playNextSong() {
+    // Find the next playlist item
+    let nextPlaylistItem = currentPlaylistItem.nextElementSibling;
+
+    // If there is a next playlist item, play it
+    if (nextPlaylistItem) {
+        const songSrc = nextPlaylistItem.getAttribute('data-src');
+        changeSong(songSrc);
+        togglePlayPause();
+        updateCurrentSongTitleDisplay();
+
+        // Remove the highlight class from the previously selected item
+        currentPlaylistItem.classList.remove('highlight');
+
+        // Add the highlight class to the next item
+        nextPlaylistItem.classList.add('highlight');
+        currentPlaylistItem = nextPlaylistItem;
+    }
 }
 
-// Function to get the title of the currently playing song
-function getCurrentSongTitle() {
-    for (let i = 0; i < playlistItems.length; i++) {
-        if (playlistItems[i].getAttribute('data-src') === audio.src) {
-            return playlistItems[i].innerHTML;
-        }
-    }
-    return ''; // Return an empty string if the song title is not found
+function updateCurrentSongTitleDisplay() {
+    const currentSongTitle = currentPlaylistItem.textContent;
+    currentSongTitleDisplay.textContent = currentSongTitle;
+}
+
+function formatTime(seconds) {
+    // Format seconds into mm:ss
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 }
