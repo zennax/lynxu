@@ -111,33 +111,76 @@ body {
     margin-top: 5px;
 }
 .playlist {
-    background-color: #41414175;
+    position: static;
+    background-color: #00000075;
     border: 2px solid #000;
-    width: auto;
+    width: 100%;
     height: 700px;
     overflow: auto;
-    white-space: nowrap;
     text-overflow: ellipsis;
     flex-wrap: wrap;
 }
 #playlist li {
+    padding: 5px;
+    width: 25%;
+    background-color: #000;
+    color: white;
     margin: 2.2px;
     text-align: center;
     justify-content: center;
     border: 2px solid #000;
-    min-width: 45%;
     cursor: pointer;
     list-style: none;
-    margin-bottom: 5px;
-    padding: 5px;
     border-radius: 4px;
 }
 #playlist li:hover {
     background-color: #ddd;
 }
 #playlist li.highlight {
-    background-color: #41414175;
+    background-color: #84838375;
 }
 .grid {
     flex-wrap: wrap;
+}
+.cloud {
+    color: #ff8800;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #272829;
+    box-shadow: 0 0 10px #0000001a;
+}
+.section1 {
+    flex: 1;
+    text-align: center;
+}
+.section1 a {
+    text-decoration: none;
+    color: #007bff;
+}
+.section1 p {
+    padding: 15px;
+    color: #ffffff;
+    background-color: #272829;
+}
+.section2 {
+    flex: 1;
+    text-align: center;
+}
+.section2 img {
+    padding-bottom: 20px;
+    max-width: 50%;
+    height: auto;
+}
+.container strong{
+    color: #ffffff;
+}
+.container sub{
+    color: #ffffff;
 }
